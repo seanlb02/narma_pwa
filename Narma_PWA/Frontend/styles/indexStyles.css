@@ -1,0 +1,557 @@
+body {
+    margin:0;
+    box-sizing: border-box;
+    
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Abyssinica SIL', serif;
+}
+
+
+.navbarContainer {
+    display: flex;
+    align-items: center;
+    width: auto;
+    min-height:7vw;
+    /* padding-top:2.5%;
+    padding-bottom:2.5%; */
+    font-size:1.2rem;
+    justify-content: flex-end;
+    padding-right:4%;
+    margin-left:auto;
+    gap: 3%;
+    /* border-bottom: solid black; */
+    box-shadow: 10;
+    font-family: 'Abyssinica SIL', serif;
+}
+
+
+.Logo {
+    flex:1;
+    margin-left:1%;
+    height:7%;
+    width:7%;
+}
+
+.About {
+    font-family: 'Abyssinica SIL', serif;
+    
+}
+
+.Download {
+    font-family: 'Abyssinica SIL', serif;
+    background-color:black;
+    border-radius:15px;
+    
+  
+    /* padding:5px; */
+    
+}
+
+.dlLink {
+    color:white;
+    padding:20px;
+    
+}
+
+.FAQ {
+    font-family: 'Abyssinica SIL', serif;
+    
+}    
+.hamburger-nav{
+    display:none;
+}
+@media screen and (max-width:500px) {
+    .Download{
+        display:none;
+    }
+    .About{
+        display:none;
+    }
+    .FAQ {
+        display:none;
+    }
+
+}
+
+.hamburger-nav{
+    display:none;
+}
+.hamburger-nav:checked ~ .mobileNav {
+    display:block;
+    margin-left: 4%;
+    margin-right: 5%; 
+}
+
+@media screen and (min-width: 500px){
+    .hamburger-nav, .hamburgerIcon {
+        display: none;
+    }
+}
+@media screen and (min-width: 400px){
+    .hamburgerSocials{
+        display:none;
+    }
+}
+
+.Navlist{
+    list-style:none;
+    /* font-size: 6vmin; */
+    font-family: 'Abyssinica SIL', serif;
+    color:white;
+}
+li{
+    padding:15px;
+    font-family: 'Abyssinica SIL', serif;
+}
+.mobileNav{
+    position: fixed;
+    display:flex;
+    text-align: left;
+    align-content:center;
+    align-items: center;
+    top:70;
+    right:0;
+    left:-20;
+    font-family: 'Abyssinica SIL', serif;
+    width:100vw;
+    height:30vh;
+    display: none;
+    background-color: white;
+    color: white;
+    box-shadow: #8d8d8d;
+   
+
+}
+@media screen and (max-width: 600px){
+    mobileNav {
+        display: none;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .navbarContainer {
+        min-height:15vw;
+    }
+
+    .Logo {
+        height:8vw;
+        width:8vw;
+        padding-left:2%;
+    }
+
+}
+
+content {
+    min-height: 100vh;
+    display:flex;
+    flex-direction: column;
+}
+
+.heroComponent {
+    text-align:center;
+    font-size: 3rem;
+    font-family: 'Abyssinica SIL', serif;
+    color:white;
+    padding-top:10%;
+    padding-left:6%;
+    padding-right:6%;
+    height:55vw;
+    background-image: url(/Assets/sunsetmountain.jpg);
+    background-position: center;
+    background-size: cover; 
+    background-repeat: no-repeat;
+    box-shadow: 20px;
+}
+
+
+        /* this is the animation css for the text reel */
+        #cycle:after {
+            animation-name: cycle; 
+            animation-duration: 7s;
+            animation-iteration-count: infinite;
+            content: ""; 
+          }
+        
+        @keyframes cycle {
+          0% {
+            content: "connecting";
+          }
+          25% {
+            content: "talking";
+          }
+          50% {
+            content: "working";
+          }
+          75% {
+              content: "dating"
+          }
+          100% {
+            content: "connecting";
+          }
+          
+        }
+}
+
+.heroText{
+    font-size:clamp(5rem, 2rem, 5rem)
+}
+
+
+@media screen and (max-width:700px){
+    .heroText{
+        font-size:clamp(1rem, 3rem, 3rem);
+}}
+
+@media screen and (max-width: 500px){
+.heroText{
+    font-size:clamp(1rem, 2rem, 1.8rem);
+}}
+
+#About {
+    display:flex;
+    height:auto;
+    padding-bottom:5%;
+}
+
+.aboutContainerLeft {
+    flex:1;
+    align-content:center;
+    padding:5%;
+    /* padding-right: -5%; */
+}
+.aboutTitle {
+    justify-content: center;
+    margin:10%;
+    font-family: 'Abyssinica SIL', serif;
+    font-size: clamp(1rem, 2.2rem, 2.5rem);
+
+}
+
+.aboutText {
+    justify-content: center;
+    margin:5%;
+    margin-left:10%;
+    font-family: 'Abyssinica SIL', serif;
+    font-size: clamp(0.5rem, 1.2rem, 1.2rem);
+}
+
+@media screen and (max-width: 700px){
+    #About{
+        display:flex;
+        flex-direction:column;
+    }
+    .aboutTitle{
+        font-size: clamp(0.1rem, 1.8rem, 2rem);
+        text-align: center;
+    }
+    .aboutText{
+        font-size: clamp(0.5rem, 1rem, 2rem);
+        text-align: center;
+        margin:5%;
+        
+    }
+}
+
+.aboutContainerRight {
+    flex:1;
+}
+
+#Background {
+    display:flex;
+    flex-direction: row-reverse;
+    height:auto;
+    padding-bottom:5%;
+    background-color: #edf1f2;
+}
+
+#Background2 {
+    display:flex;
+    flex-direction: row-reverse;
+    height:auto;
+    padding-bottom:5%;
+    background-color: #f9e4b5;
+}
+
+#Background3 {
+    display:flex;
+    flex-direction: row-reverse;
+    height:auto;
+    padding-bottom:5%;
+    background-color: #edf1f2;
+}
+
+.backgroundContainerLeft {
+    flex:1;
+    align-content:center;
+    /* padding:5%; */
+    /* padding-right: -5%; */
+}
+
+.screenshot {
+    text-align:center;
+    justify-content: center;
+    flex:1;
+    height:auto;
+    
+}
+.screenshot1{
+    height:50vw;
+    width: 40vw;
+    object-fit:cover;
+  
+}
+.backgroundTitle {
+    justify-content: center;
+    margin:10%;
+    margin-top:20%;
+    font-family: 'Abyssinica SIL', serif;
+    font-size: clamp(1rem, 2.2rem, 2.5rem);
+
+}
+.backgroundText {
+    justify-content: center;
+    margin:5%;
+    margin-left:10%;
+    margin-top:10%;
+    font-family: 'Abyssinica SIL', serif;
+    font-size: clamp(0.5rem, 1.2rem, 1.2rem);
+}
+
+@media screen and (max-width: 700px){
+    #Background{
+        display:flex;
+        flex-direction:column;
+        
+    }
+    #Background2{
+        display:flex;
+        flex-direction:column;
+    }
+    #Background3{
+        display:flex;
+        flex-direction:column;
+    }
+    .backgroundTitle{
+        font-size: clamp(0.1rem, 1.6rem, 2rem);
+        text-align: center;
+        margin:5%;
+        padding-top:5%;
+    }
+    .backgroundText{
+        font-size: clamp(0.5rem, 0.9rem, 2rem);
+        text-align: center;
+        margin:5%;
+    }
+    .screenshot {
+        flex:1;
+        margin:0;
+    }
+    .screenshot1{
+        margin:0;
+        height:70vw;
+        width:50vw;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .screenimage {
+        width:80vw;
+    }
+
+
+}
+
+.getStartedContainer {
+    background-color: #f8ebcf;
+}
+
+.getStartedTitle {
+   
+    text-align: center;
+    margin:5%;
+    margin-top:8%;
+    margin-bottom:10%;
+    font-size: clamp(1rem, 2.2rem, 2.5rem);
+    font-family: 'Abyssinica SIL', serif;    
+}
+
+.howItWorks {
+    display:flex;
+    /* width: 100vw;
+    height:30vw; */
+    text-align:center;
+    background-color: #f8ebcf;
+}
+
+.stepsContainer {
+    flex:1;
+    justify-content: center;
+    margin-top:13%;
+    margin-bottom:5%;
+    padding:2%;
+    margin-left:2%;
+    margin-right:2%;
+    font-family: 'Abyssinica SIL', serif;
+    font-size: clamp(0.5rem, 1rem, 1rem);
+}
+
+
+
+.DownloadButtons {
+    display:flex;
+    justify-items: center;
+    margin-left:12%;
+    margin-right:12%;
+   height:20vw;
+    
+}
+
+/* .dlButton {
+    display:inline-block;
+    width:auto;
+    height:auto;
+    text-align: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    font-family: 'Abyssinica SIL', serif;
+    text-align: center;
+    border-radius: 15px;
+    padding:10px;
+
+} */
+
+.googlebutton {
+    background-size: 50%;
+    height:auto;
+    width:auto;
+  flex:1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("/Assets/google-play-badge.png");    filter: drop-shadow(0.6rem 0.6rem 1rem rgba(0, 0, 0, 0.8));
+
+}
+
+.applebutton {
+    text-align:center;
+    background-size: 40%;
+    flex:1;
+    min-height:80px;
+    min-width:180px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("/Assets/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg");    filter: drop-shadow(0.6rem 0.6rem 1rem rgba(0, 0, 0, 0.8));
+}
+
+.disclaimer {
+    justify-content: center;
+    padding-top:5%;
+}
+
+.disclaimerTitle {
+    text-align: center;
+    font-size: clamp(1rem, 2.2rem, 2.5rem);
+    font-family: 'Abyssinica SIL', serif;
+}
+
+.disclaimerText {
+    text-align: justify;
+    font-family: 'Abyssinica SIL', serif;
+    font-size: clamp(0.5rem, 1.2rem, 1.2rem);
+    margin-left:12%;
+    margin-right:12%;
+    margin-bottom: 12%;
+}
+
+@media screen and (max-width: 700px){
+    .howItWorks {
+        display:flex;
+        flex-direction:column;
+        
+    }
+
+    .stepsContainer {
+        margin-left:15%;
+        margin-right:15%;
+    }
+
+    .downloadButtons {
+        flex-direction:column;
+        margin-top:10%;
+        gap:15%;
+    }
+
+    .disclaimerText{
+        font-size: clamp(0.5rem, 1rem, 2rem)
+    }
+
+    .disclaimerTitle {
+        font-size: clamp(0.1rem, 1.8rem, 2rem)
+    }
+
+    .getStartedTitle {
+        font-size: clamp(0.1rem, 1.8rem, 2rem)
+    }
+    .googlebutton {
+        background-size:50%;
+        
+        
+    }
+    .applebutton {
+        background-size:44%;
+
+    }
+}
+
+footer {
+  
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height:auto;
+    bottom:0;
+    top:100%;
+    border-top:solid black;
+    background-color:black
+
+}
+
+.leftFooterContainer {
+    flex: 1;
+    flex-direction: column;;
+    justify-content: center;
+    text-align:left;
+    margin:2%;
+    
+    
+}
+
+.footerList {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5%;
+}
+
+.copyright { 
+    font-size: clamp(0.5rem, 0.9rem, 2rem)
+
+}
+
+.Footerlink {
+    color:white;
+    padding:3%;
+}
+
+.rightFooterContainer {
+    flex:1;
+    align-items:flex-end;
+    text-align:left;
+    
+    margin:2%;
+    padding-top:7%;
+    color:white;
+}

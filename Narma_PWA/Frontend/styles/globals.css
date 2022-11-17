@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind screens;
+
+html{
+  border-style: border-box;
+
+} 
+
+/* @media screen and (min-width:1000px){
+
+  .HeroContainer{
+    display: flex;
+    flex-direction: column;
+  }
+} */
