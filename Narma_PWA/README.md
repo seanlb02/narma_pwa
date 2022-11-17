@@ -1,6 +1,6 @@
-Narma Documentation
+# Narma Documentation
 
-Stay connected off-grid with the Narma Network
+##Stay connected off-grid with the Narma Network
 
 ---
 
