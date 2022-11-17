@@ -27,7 +27,7 @@ export default function Navbar(){
 }
 
 const styles = {
-    NavContainer: 'flex p-8 bg-[#f4fbfb] justify-center content-center xs:h-12 lg:h-24',
+    NavContainer: 'flex p-8 justify-center content-center xs:h-12 lg:h-24',
     logo:  'flex flex-1 xs:text-s content-center lg:-mr-12 h-auto w-[100px]',
     links: 'flex flex-1 justify-end gap-5 items-center content-right xs:text-s invisible md:visible',
     
