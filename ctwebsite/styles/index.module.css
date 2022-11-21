@@ -1,0 +1,106 @@
+.pageContainer{
+  background-color: red;
+  box-sizing: border-box;
+  height:100vh;
+}
+
+.releaseTitle {
+  font-family:mono;
+  padding-left:10%;
+  padding-bottom:1%;
+  margin-left:5%;
+  margin-right:5%;
+  border-bottom:solid black;
+}
+
+.CT007 {  
+  padding-top:3%;
+}
+
+.songContainer{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+
+.trackContainer {
+  width:auto;
+  display:inline-flex;
+ 
+  justify-content: center;
+  align-items: center;
+}
+
+.trackText {
+  font-family:mono;
+  display:flex;
+  width:fit-content;
+  height:fit-content;
+  z-index: 1;
+  color:black;
+
+}
+.audioPlayer:hover + .trackText{
+  opacity:0;
+}
+
+.audioPlayer:hover {
+  opacity: 1;
+}
+
+.audioPlayer{
+  opacity:0;
+  position:absolute;
+  z-index:9;
+  }
+
+.trackText:hover + .audioPlayer {
+  opacity:1;
+  /* transform: translateY(100%); */
+  max-width: 50vw;
+}
+
+/* This is for mobile/tablets - to drop below track title once clicked (as hover is irrelvant */
+
+@media screen and (max-width:900px){
+  
+  .audioPlayer:hover + .trackText{
+    opacity:1;
+  }
+  .audioPlayer{
+    opacity:0;
+    position:absolute;
+    z-index:9;
+    }
+  
+  .audioPlayer:hover {
+    opacity:0;
+  }
+
+  .dropdownPlayer {
+    opacity:1;
+    transform: translateY(100%);
+    position:absolute;
+    max-width: 50vw;
+  }
+
+  .trackText {
+    font-family:mono;
+    display:flex;
+    width:fit-content;
+    height:fit-content;
+    z-index: 12;
+    color:black;
+  }
+  
+
+
+  }
+
+
+
+
+
+
+
