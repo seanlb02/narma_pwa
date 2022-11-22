@@ -2,34 +2,114 @@
   background-color: red;
   box-sizing: border-box;
   height:100vh;
+  min-width:100%;
+  padding-left:7%;
+}
+
+@media screen and (max-width: 600px) {
+  .pageContainer {
+    padding-left:0;
+  }
+}
+
+/* the following styles encapsulates a single release (incl. dropdowns) */
+
+.Release {  
+  padding:0;
+  display:flex;
+  flex-direction:column;
 }
 
 .releaseTitle {
   font-family:mono;
   padding-left:10%;
   padding-bottom:1%;
-  margin-left:5%;
-  margin-right:5%;
   border-bottom:solid black;
+  border-left:solid black;
+
+  padding-top:4%;
+  z-index:99;
+  margin:0;
 }
 
-.CT007 {  
-  padding-top:3%;
+.releaseTitle:hover {
+  background-color: black;
+  color:white;
+}
+
+
+.CT007Content {
+  display:flex;
+  flex-direction: row-reverse;
+  height:0;
+  overflow:hidden;
+  /* animation: open-CT007 1s linear forwards;
+  animation-delay:0.2s; */
+}
+@keyframes open-CT007 {
+  from{height:0;}
+  to{height:auto}
+}
+
+.CT006Content {
+  display:flex;
+  flex-direction: row-reverse;
+  height:0;
+  overflow:hidden;
+  animation: open-CT006 1s linear forwards;
+  animation-delay:0.2s;
 }
 
 .songContainer{
   display:flex;
+  flex:1;
   flex-direction: column;
-  justify-content: center;
-  
+  justify-content: flex-start;
+  align-content: center;
+  height:0;
+  overflow:hidden;
 }
+
+@keyframes CT007-dropdown {
+  from{height:0}
+  to{height:auto; overflow:visible;  padding-top:10%;}
+}
+
+/* make a CT007 toggle switch which activates these when checked */
+
+.CT007toggle:checked{
+  border:solid black;
+}
+
+.CT007toggle:checked ~ .songContainer{
+  animation: CT007-dropdown 1s linear forwards;
+  animation-delay:0.5s;
+}
+
+.CT007toggle:checked ~ .CT007Content{
+animation: open-CT007 1s linear forwards;
+  animation-delay:0.2s;
+}
+
+.CT007toggle:checked ~ .artworkContainer{
+animation: CT007-pullover 1s linear forwards;
+animation-delay:2s;
+}
+
+/* animations for CT007 */
+
+
+
+
+
+
 
 .trackContainer {
   width:auto;
   display:inline-flex;
- 
   justify-content: center;
   align-items: center;
+
 }
 
 .trackText {
@@ -41,6 +121,32 @@
   color:black;
 
 }
+
+.artworkContainer {
+  display:none;
+}
+
+.artworkContainer {
+  display:flex;
+  flex:2;
+  transform: translateX(150%);
+  background-color: white;
+  min-height:50vw;
+  max-height:60vw;
+  width:auto;
+  z-index:1;
+}
+
+@keyframes CT007-pullover {
+  from{transform: translate3d(100%,0,0);}
+  to{transform: translate3d(0,0,0);}
+}
+
+
+
+
+/* styles for the audio players: */
+
 .audioPlayer:hover + .trackText{
   opacity:0;
 }
@@ -61,6 +167,20 @@
   max-width: 50vw;
 }
 
+
+
+
+
+/* .artworkContainer::before {
+  position:absolute;
+  transition: all 1s ease;
+  transform:translateX(100%);
+}
+
+.songContainer:hover + .artworkContainer::before {
+  transform:translateX(0%) */
+/* } */
+
 /* This is for mobile/tablets - to drop below track title once clicked (as hover is irrelvant */
 
 @media screen and (max-width:900px){
@@ -80,9 +200,13 @@
 
   .dropdownPlayer {
     opacity:1;
-    transform: translateY(100%);
+    transform: translateY(65%);
     position:absolute;
-    max-width: 50vw;
+    max-width: 80vw;
+  }
+
+  .songContainer {
+    padding-bottom:10%;
   }
 
   .trackText {
@@ -92,8 +216,22 @@
     height:fit-content;
     z-index: 12;
     color:black;
+    padding-bottom:3%;
   }
   
+  .releaseContent {
+    display:flex;
+    flex-direction: column-reverse;
+  }
+
+  .artworkContainer {
+    display:flex;
+    flex:2;
+    background-color: white;
+    min-height:80vw;
+    max-height:100vw;
+    width:auto;
+  }
 
 
   }

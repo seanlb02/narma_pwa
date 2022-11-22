@@ -1,0 +1,12 @@
+.pageContainer {
+    /* padding-left:7%; */
+    border-left:solid black;
+    /* display:flex; */
+    
+}
+
+@media screen and (max-width:600px) {
+    .pageContainer {
+        padding-left:0;
+    }
+}

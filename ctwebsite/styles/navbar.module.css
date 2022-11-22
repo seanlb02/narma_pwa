@@ -1,0 +1,41 @@
+.navbarContainer {
+    
+    width: 100vh;
+    max-height:100px;
+    min-height:80px;
+    top:0;
+
+    transform-origin: left top;
+    transform:rotate(-90deg) translateX(-100%);
+    position:fixed;
+}
+
+@media screen and (max-width:600px) {
+    .navbarContainer {
+    width: 100vh;
+    max-height:50px;
+    min-height:80px;
+    position:initial;
+    transform:initial;
+    transform-origin: initial;
+
+    }
+}
+
+.linkList {
+    font-family:'Sono', sans-serif;
+    color:white;
+    font-weight: 400;
+    font-size: 1.3rem;
+    padding-right:5%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap:10%;
+    list-style: none;
+}
+
+.link {
+    cursor:pointer;
+}
