@@ -9,7 +9,7 @@ export default function AboutContent () {
         <div className ={styles.content}>
         <section className = {styles.heroComponent}>
             <div className = {styles.heroImage}>
-                <h1 className = {styles.heroText}>Having trouble <span id="cycle"></span>?</h1>
+                <div className = {styles.heroText}>Having trouble <span id="cycle"></span>?</div>
             </div>
         </section>
 
@@ -41,7 +41,7 @@ export default function AboutContent () {
                 </p>
             </div>
             <div className = {styles.screenshotReverse}>
-                <img className = {styles.screenimage} src = "/jokestipsprompt.svg" height = {500} width = {500} layout = "responsive"/>
+                <Image className = {styles.screenimage} src = "/jokestipsprompt.svg" height = {500} width = {500} layout = "responsive"/>
             </div>
         </section>
 
@@ -91,26 +91,28 @@ export default function AboutContent () {
 
 const styles = {
     content: "flex flex-col",
-    heroComponent: "justify-center items-center",
-    heroImage: "bg-mountains bg-cover bg-no-repeat h-[55vw] items-center justify-center",
-    heroText: "text-white text-center items-center justify-center ",
-    About: "flex p-10 pt-36 pb-36 bg-[#DAF7A6]",
-    aboutText: "mr-24 mt-10",
-    aboutTitle: "text-4xl",
-    aboutContainerLeft: "flex-1 flex-col ml-24 mr-16",
+    heroComponent: "justify-center items-center content-center",
+    heroImage: "bg-fixed flex bg-mountains bg-cover bg-center content-center bg-no-repeat min-h-[40vw] items-center justify-center",
+    heroText: "text-white font-merriweather xs:text-2xl lg:text-6xl text-center content-center justify-center ",
+    cycle: "",
+    About: "bg-hero bg-contain bg-bottom bg-no-repeat xs:flex xs:flex-col lg:p-10 xs:pt-0 xs:pb-0 lg:pt-20 bg-[#e8ffc0] pb-12 xs:pb-12 sm:min-h-[100vw] xs:min-h-[120vw] md:min-h[120vw]",
+    aboutText: "text-center lg:mt-12 xs:mt-6 xs:text-s md:text-2xl",
+    aboutTitle: "font-roboto text-center xs:text-4xl md:text-6xl font-bold",
+    aboutBg: "bg-hero",
+    aboutContainerLeft: "flex-1 flex-col xs:m-16 md:ml-24 md:mr-16",
     aboutContainerRight: "flex-1",
-    Background: "flex flex-row-reverse mt-20",
-    Background2: "flex mt-20 py-16 bg-[#dceef0]",
-    Background3: "flex flex-row-reverse mt-20",
+    Background: "xs:flex xs:content-center xs:flex-col lg:flex lg:flex-row-reverse xs:mt-2 lg:mt-20",
+    Background2: "xs:flex xs:flex-col lg:flex lg:mt-20 md:py-16 bg-[#dceef0]",
+    Background3: "xs:flex xs:flex-col lg:flex lg:flex-row-reverse lg:mt-24",
     screenshot: "flex flex-1 ml-28",
     screenshotReverse: "flex flex-1 ml-16",
-    backgroundContainerLeft: "flex-1 flex-col text-left items-center content-center m-10 mt-36",
-    backgroundTitle: "text-3xl mb-7 mx-15",
-    backgroundText: "mx-15",
+    backgroundContainerLeft: "flex-1 flex-col text-left items-center content-center m-10 mt-8",
+    backgroundTitle: "lg:text-5xl mb-7 lg:mx-16 xs:mx-24 xs:text-4xl lg:mt-24",
+    backgroundText: "lg:mx-16 xs:mx-7",
     getStartedContainer: "text-center pt-12",
     getStartedTitle: "text-3xl mt-24 bg-[#DAF7A6] pt-12",
-    howItWorks: "flex bg-[#DAF7A6]",
-    stepsContainer: "flex-1 p-12 flex-col mb-12",
+    howItWorks: "xs:flex xs:flex-col md:flex bg-[#DAF7A6]",
+    stepsContainer: "flex-1 p-12 flex-col mb-12 text-justified",
     stepOneImage: "bg-mountains h-[20vw] bg-contain mb-12",
     stepTwoImage: "bg-mountains h-[20vw] bg-contain mb-12",
     stepThreeImage: "bg-mountains h-[20vw] bg-contain mb-12",

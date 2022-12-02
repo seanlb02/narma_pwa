@@ -12,9 +12,9 @@ export default function Navbar(){
             <div className={styles.logo}><Link href="/">[logo]</Link></div>
             <div className={styles.links}>
                 <div className={styles.button}><Link href="/about">About</Link></div>
-                <div className={styles.button}>FAQ</div>
+                <div className={styles.button}><Link href="/Messages">FAQ</Link></div>
                 <div className={styles.button}>
-                    <div className={styles.GDbutton}>Get Started</div>
+                    <div className={styles.GDbutton}>Sign up</div>
                 </div>
             </div>
 
@@ -27,7 +27,7 @@ export default function Navbar(){
 }
 
 const styles = {
-    NavContainer: 'flex p-8 justify-center content-center xs:h-12 lg:h-24',
+    NavContainer: 'flex p-8 bg-white justify-center content-center xs:h-12 lg:h-24',
     logo:  'flex flex-1 xs:text-s content-center lg:-mr-12 h-auto w-[100px]',
     links: 'flex flex-1 justify-end gap-5 items-center content-right xs:text-s invisible md:visible',
     

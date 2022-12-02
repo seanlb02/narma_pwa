@@ -8,6 +8,32 @@ html{
 
 } 
 
+#cycle:after {
+  animation-name: cycle; 
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  content: ""; 
+}
+
+@keyframes cycle {
+0% {
+  content: "connecting";
+}
+25% {
+  content: "talking";
+}
+50% {
+  content: "working";
+}
+75% {
+    content: "dating"
+}
+100% {
+  content: "connecting";
+}
+
+}
+
 /* @media screen and (min-width:1000px){
 
   .HeroContainer{
